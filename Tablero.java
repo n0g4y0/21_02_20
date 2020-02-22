@@ -94,6 +94,39 @@ public ArrayList<Coordenada> listaMovimientosValidosFichaInicial(){
 
         return resultado;
     
+  }
+  
+  
+  public String aplicarMovidaValidaTablero(Coordenada FichaInicial, Coordenada movidaValida){
+      String resultado = "";
+      int valorFichaTemporal = -1;
+      
+      for(int i=0; i<tablero.length; i++){
+    
+        for(int j=0; j<tablero[0].length; j++ ){
+            
+            
+            
+            if(movidaValida.getValorX() == i && movidaValida.getValorY() == j){
+                
+                valorFichaTemporal = tablero[i][j].getValor();
+                tablero[i][j].setValor(valorFichaTemporal);
+                
+                tablero[FichaInicial.getValorX()][FichaInicial.getValorY()].setValor(valorFichaTemporal);
+                
+            
+            }
+            
+        
+        }
+        
+        
+    }
+      
+      
+    
+      return mostrarTableroOrdenadoFormateado();
+      
     }
     
     

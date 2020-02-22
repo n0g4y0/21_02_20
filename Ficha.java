@@ -14,6 +14,9 @@ public class Ficha
     public int getValor(){
         return valor;
     }
+    public void setValor(int nuevoValor){
+        valor = nuevoValor;
+    }
     
     public Coordenada getCoordenada(){
         return coordenada;
